@@ -8,7 +8,7 @@ objectives:
 
 # Lab: style your project with Tailwind CSS
 
-Your project has pages, routes and rendering strategies - and no face. In this lab, you install Tailwind CSS, style your layout, and give the project its first fully featured components: stateful, interactive, styled, and placed on the right side of the server/client boundary you learned in the rendering lab.
+This lab adds styling to your project, and its first fully featured components: stateful, interactive and styled.
 
 ## 1. Install Tailwind CSS
 
@@ -47,20 +47,19 @@ Add the `wt-title` class to every `h1` of your pages. Remember the class rule of
 
 Time to make the project interactive. You will build components that **manage their own state** and are **styled in all their states** (hover, focus, disabled, open/closed, invalid, ...).
 
-For each component, apply the rendering lab: decide whether it is a server or a client component, add `'use client'` only where state or event handlers require it, and keep it as deep in the tree as possible - the page around it must stay a server component.
+Add `'use client'` only on components that need state or event handlers, as deep in the tree as possible.
 
 Build these two:
 
 1. **Mobile navigation**: below the `md:` breakpoint, the nav menu collapses behind a hamburger button, opened and closed with `useState`. The `Nav` becomes a client component, the layout around it stays server.
-2. **Contact form** on your contacts page: controlled inputs (module 4), client-side validation with visible feedback (invalid fields styled, submit button disabled while invalid), and a success state on submission. Log the data to the console for now: module 8 plugs a database behind it. The [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms) plugin (registered with [`@plugin`](https://tailwindcss.com/docs/functions-and-directives#plugin-directive)) gives you sane input defaults.
+2. **A form** of your application (eg a contact form for a blog): controlled inputs (module 4), client-side validation with visible feedback (invalid fields styled, submit button disabled while invalid), and a success state on submission. Store the submissions in the database if the project has one, otherwise log them to the console. The [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms) plugin (registered with [`@plugin`](https://tailwindcss.com/docs/functions-and-directives#plugin-directive)) gives you sane input defaults.
 
 And at least one of your choice, for example:
 
-- A **search field** on your collection page, filtering the displayed items as you type
-- A **like button** on your item pages, with an optimistic counter
 - A **theme toggle** switching the `dark:` variant on and off
+- An **accordion** or **tabs** organizing the content of a page
 
-Finally, update `docs/ARCHITECTURE.md`: mark each component server or client. Run `npm run build` and check against your `docs/RENDERING.md`: adding interactivity must not have turned your static pages dynamic.
+Finally, run `npm run build`: adding interactivity must not turn your static pages dynamic.
 
 ## 5. Bonus - dark mode
 

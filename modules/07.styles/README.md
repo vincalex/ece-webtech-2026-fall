@@ -6,7 +6,7 @@ duration: 1h
 
 ## The problem: CSS doesn't know about components
 
-- A tree of components, rendered with the right strategy (module 6) - and the looks of 1995
+- A tree of components - and the looks of 1995
 - CSS predates components: one global namespace for the whole page
   - Name collisions, specificity wars, `!important` escalation
   - Styles live far from the markup they affect
@@ -47,7 +47,7 @@ import styles from './Button.module.css'
 ```
 
 - Full colocation, dynamic styles from props - peak popularity circa 2020
-- Declining since: the styles are computed at runtime in the browser, a cost, and a conflict with Server Components (module 6)
+- Declining since: the styles are computed at runtime in the browser, a cost, and a conflict with Server Components
 - Zero-runtime successors ([vanilla-extract](https://vanilla-extract.style/), Meta's [StyleX](https://stylexjs.com/)) compile the styles away
 
 ### Utility classes
